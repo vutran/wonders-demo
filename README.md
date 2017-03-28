@@ -1,6 +1,6 @@
 # wonders-demo
 
-> Demo application made by Wonders.
+> Demo application made by [Wonders](https://github.com/vutran/wonders).
 
 ## Install
 
