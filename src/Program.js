@@ -2,6 +2,14 @@ import Wonders from 'wonders';
 import beep from './commands/beep';
 import search from './commands/search';
 
+class Test extends Wonders.Component {
+    render() {
+        return (
+            <p>This is a <em>test</em> <strong>class</strong> component.</p>
+        );
+    }
+}
+
 // creates the program
 export default function() {
     return (
@@ -9,6 +17,9 @@ export default function() {
             <command name="search" description="Search for a repository on GitHub." onAction={search} />
             <command name="beep" description="Prints Beep!" onAction={beep} />
             <command name="boop" description="Prints Boop!">Boop!</command>
+            <command name="test" description="Test class components">
+                <Test>this should not be printed.</Test>
+            </command>
             <command name="fancy" description="Prints fancy text!">
                 <strong>strong</strong>
                 <em>italic</em>
