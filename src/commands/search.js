@@ -1,3 +1,4 @@
+import Wonders from 'wonders';
 import { searchRepo } from '../utils';
 
 export default function(args) {
@@ -10,8 +11,10 @@ export default function(args) {
     return searchRepo(q)
         .then(res => res.items.map(item => item.full_name))
         .then(repos => {
-            let log = 'Found: \n';
-            log += repos.join('\n');
-            return log;
+            return (
+                <ul>
+                    {repos.map(repo => <li>{repo}</li>)}
+                </ul>
+            );
         });
 }
