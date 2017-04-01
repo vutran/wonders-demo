@@ -2,10 +2,21 @@ import Wonders from 'wonders';
 import beep from './commands/beep';
 import search from './commands/search';
 
+class Item extends Wonders.Component {
+    render() {
+        return (
+            <p><strong>{this.props.name}</strong></p>
+        );
+    }
+}
+
 class Test extends Wonders.Component {
     render() {
         return (
-            <p>This is a <em>test</em> <strong>class</strong> component.</p>
+            <div>
+                <Item name="Foo" />
+                <Item name="Bar" />
+            </div>
         );
     }
 }
