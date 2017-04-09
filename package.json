@@ -1,6 +1,6 @@
 {
   "name": "wonders-demo",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "cli.js",
   "bin": {
     "wonders": "./cli.js"
