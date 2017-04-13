@@ -23,3 +23,11 @@ $ wonders boop
 
 $ wonders search <repoName>
 ```
+
+## Related
+
+- [Wonders](https://github.com/vutran/wonders/) - Declarative framework for building CLI apps.
+
+## License
+
+MIT © [Vu Tran](https://github.com/vutran/)
