@@ -1,22 +1,37 @@
 {
   "name": "wonders-demo",
   "version": "0.1.0",
-  "main": "cli.js",
+  "main": "lib/index.js",
   "bin": {
-    "wonders": "./cli.js"
+    "wonders": "lib/index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "wonders",
+    "demo",
+    "jsx",
+    "react"
+  ],
   "author": "Vu Tran <vu@vu-tran.com>",
   "license": "MIT",
-  "description": "",
+  "description": "Demo application for the Wonders CLI framework",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vutran/wonders-demo.git"
+  },
+  "scripts": {
+    "lint": "prettier --single-quote --trailing-comma=es5 --print-width=90 --tab-width=4 --write 'src/*.js' 'index.js'",
+    "precommit": "npm run lint",
+    "prepublish": "npm run build",
+    "build": "babel src/ --out-dir lib/",
+    "test": "npm run lint"
+  },
   "devDependencies": {
-    "babel-plugin-transform-async-to-generator": "^6.22.0",
-    "babel-plugin-transform-react-jsx": "^6.23.0",
-    "babel-polyfill": "^6.23.0",
-    "babel-preset-es2015": "^6.24.0",
-    "babel-register": "^6.24.0"
+    "babel-cli": "^6.24.1",
+    "babel-preset-wonders": "^0.1.0",
+    "husky": "^0.13.3",
+    "prettier": "^0.22.0"
   },
   "dependencies": {
-    "wonders": "^0.2.0"
+    "wonders": "^0.3.1"
   }
 }

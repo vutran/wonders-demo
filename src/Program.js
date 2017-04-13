@@ -4,9 +4,7 @@ import search from './commands/search';
 
 class Item extends Wonders.Component {
     render() {
-        return (
-            <p><strong>{this.props.name}</strong></p>
-        );
+        return <p><strong>{this.props.name}</strong></p>;
     }
 }
 
@@ -25,7 +23,11 @@ class Test extends Wonders.Component {
 export default function() {
     return (
         <program version="1.0.0" parse={process.argv}>
-            <command name="search" description="Search for a repository on GitHub." onAction={search} />
+            <command
+                name="search"
+                description="Search for a repository on GitHub."
+                onAction={search}
+            />
             <command name="beep" description="Prints Beep!" onAction={beep} />
             <command name="beep" description="Prints Beep!" onAction={beep} />
             <command name="boop" description="Prints Boop!">Boop!</command>
