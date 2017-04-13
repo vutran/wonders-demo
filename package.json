@@ -11,6 +11,11 @@
     "jsx",
     "react"
   ],
+  "files": [
+    "lib",
+    "LICENSE",
+    "README.md"
+  ],
   "author": "Vu Tran <vu@vu-tran.com>",
   "license": "MIT",
   "description": "Demo application for the Wonders CLI framework",
